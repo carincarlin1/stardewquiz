@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stardew Valley Quiz</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="main"><!-- open main div -->
+<div id="header"><!-- open header div -->
+<h1>Stardew Valley Quiz</h1>
+</div><!-- close header div -->
+
+<h1>Stardew Valley Quiz- How well do you know this RPG?</h1>
+<form id="form1">
+
+<h2>Who is the developer that made Stardew Valley?</h2>
+<label for="var_ape"><input type="radio" name="variable" value="25" id="var_ape" />ConcernedApe</label>
+<label for="var_sean"><input type="radio" name="variable" value="0" id="var_sean" />Sean Young</label>
+<label for="var_sunny"><input type="radio" name="variable" value="0" id="var_sunny" />Sunny Side Up</label>
+<label for="var_nintendo"><input type="radio" name="variable" value="0" id="var_nintendo"/>Nintendo</label>
+
+<h2>What Mystical Element is NOT in the game?</h2>
+<label for="sub_witch"><input type="radio" name="sub" value="0" id="sub_witch"/>Witches</label>
+<label for="sub_wizard"><input type="radio" name="sub" value="0" id="sub_wizard"/>Wizards</label>
+<label for="sub_alien"><input type="radio" name="sub" value="0" id="sub_alien" />Aliens</label>
+<label for="sub_bigfoot"><input type="radio" name="sub" value="25" id="sub_bigfoot" />Bigfoot</label>
+
+<h2>What is the gift you give someone if you want to marry them?</h2>
+<label for="cat_bouquet"><input type="radio" name="con" value="0" id="cat_bouquet" />Bouquet</label>
+<label for="cat_pendant"><input type="radio" name="con" value="25" id="cat_pendant" />Mermaid Pendant</label>
+<label for="cat_junimo"><input type="radio" name="con" value="0" id="cat_junimo" />a Junimo</label>
+<label for="cat_shard"><input type="radio" name="con" value="0" id="cat_shard" />Prismatic Shard</label>
+
+<h2>What is a crop you can grow in the summer?</h2>
+<label for="if_kale"><input type="radio" name="ifstate" value="0" id="if_kale" />Kale</label>
+<label for="if_cranberries"><input type="radio" name="ifstate" value="0" id="if_cranberries" />Cranberries</label>
+<label for="if_bok"><input type="radio" name="ifstate" value="0" id="if_bok" />Bok Choy</label>
+<label for="if_blueberries"><input type="radio" name="ifstate"  value="25" id="if_blueberries" />Blueberries</label>
+
+<button type="submit" value="Submit">Submit</button>
+
+</form>
+
+<p>Your grade is: <span id="grade">__</span></p>
+<p id="grade2"></p>
+</div><!-- close main div -->
+<script>
+document.getElementById("form1").onsubmit=function() {
+       variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+	   sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+	   con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+	   ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+	   
+	   
+	   result = variable + sub + con + ifstate;
+	   
+	document.getElementById("grade").innerHTML = result;
+
+	if (result == 0) {result2 = "Did you literally just buy the game?<br /><img src='shane.gif' width='300' />"};
+if (result == 25) {result2 = "It seems like you just turned on your game. Try again!<br/><img src='rain.gif' width='300' />"};
+if (result == 50) {result2 = "You did okay. Did you just start playing?<br/><img src='dance.gif' width='300' />"};
+if (result == 75) {result2 = "Pretty good. Are you Year 2?<br/><img src='emily.gif' width='300' />"};
+if (result == 100) {result2 = "100! Are you ConcernedApe himself?<br/><img src='junimo.gif' width='300' />"};
+document.getElementById("grade2").innerHTML = result2; 
+	   
+
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+</script>
+</body>
+</html>

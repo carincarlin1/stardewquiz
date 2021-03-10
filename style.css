@@ -1,0 +1,46 @@
+body {
+background-color: lightblue;
+background-image: url("back.png");
+background-size: 250px 250px;
+font-family: 'Quicksand', sans-serif;
+}
+
+#main {
+width: 80%;
+max-width: 950px;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: white;
+border-radius: 10px;
+}
+
+#header {
+margin-top: 0;
+border: 2px solid black;
+padding: 5px;
+height: 250px;
+background-image: url("everyone.jpg");
+color: white;
+text-align: center;
+font-family: 'Bebas Neue', cursive;
+font-size: x-large;
+}
+label {
+display: block;
+}
+
+input {
+width: 30px;
+margin-left: 20px;
+}
+
+h2 {
+clear: both;
+padding-top: 20px;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
